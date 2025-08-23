@@ -1,0 +1,16 @@
+{
+  "name": "@freevue/utils",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.2"
+  }
+}

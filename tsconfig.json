@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true,
+    "isolatedModules": true,
+    "rootDir": "src",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "target": "ESNext"
+  }
+}
