@@ -1,4 +1,4 @@
-import { join } from './index'
+import { join } from '.'
 
 test('Join ', () => {
   expect(join('/A', '/B')).toBe('/A/B')
