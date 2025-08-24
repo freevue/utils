@@ -8,5 +8,6 @@
     "baseUrl": ".",
     "target": "ESNext",
     "moduleResolution": "bundler"
-  }
+  },
+  "exclude": ["node_modules"]
 }
