@@ -1,13 +1,17 @@
-function join(path: string): (...paths: string[]) => string
-function join(path: string, ...paths: string[]): string
+import { map, pipe, prepend, join } from '@fxts/core'
 
-function join(path: string, ...paths: string[]) {
-  if (paths.length === 0) return (...paths: string[]) => join(path, ...paths)
+function pathJoin(path: string): (...paths: string[]) => string
+function pathJoin(path: string, ...paths: string[]): string
 
-  paths = paths.map((path) => path.replace(/^\/+|\/+$/g, ''))
-  paths.unshift(path.replace(/\/$/, ''))
+function pathJoin(path: string, ...paths: string[]) {
+  if (paths.length === 0) return (...paths: string[]) => pathJoin(path, ...paths)
 
-  return paths.join('/')
+  return pipe(
+    paths,
+    map((path) => path.replace(/^\/+|\/+$/g, '')),
+    prepend(path.replace(/\/$/, '')),
+    join('/')
+  )
 }
 
-export default join
+export default pathJoin
